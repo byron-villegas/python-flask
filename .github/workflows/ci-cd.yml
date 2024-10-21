@@ -16,7 +16,7 @@ jobs:
       - name: Install Packages
         run: pip install -r requirements.txt
   unit-test:
-    needs: [build]
+    needs: [ build ]
     runs-on: ubuntu-latest
     container:
       image: python:3.12.5
@@ -51,7 +51,7 @@ jobs:
           output: both
           thresholds: '80'
   deploy:
-    needs: [build, unit-test]
+    needs: [ build, unit-test ]
     runs-on: ubuntu-latest
     env:
       RENDER_DEPLOY_HOOK: ${{ secrets.RENDER_DEPLOY_HOOK }}
@@ -65,7 +65,7 @@ jobs:
       - name: Sleep By Two Minutes
         run: sleep 120
   acceptance-test:
-    needs: [deploy]
+    needs: [ deploy ]
     runs-on: ubuntu-latest
     container:
       image: python:3.12.5
@@ -82,7 +82,7 @@ jobs:
           name: behave-report.html
           path: behave-report.html
   performance-test:
-    needs: [acceptance-test]
+    needs: [ acceptance-test ]
     runs-on: ubuntu-latest
     container:
       image: python:3.12.5
