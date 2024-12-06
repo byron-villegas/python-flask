@@ -100,3 +100,14 @@ Se debe ejecutar el siguiente comando
 ```shell
 behave acceptance-test/features -f html -o behave-report.html
 ```
+
+# Links Referenciales
+A continuación dejo links utilizados para realizar este proyecto
+
+[Python Naming Conventions](https://www.geeksforgeeks.org/python-naming-conventions/)
+[Configuring Your Flask App](https://dev.to/hackersandslackers/configuring-your-flask-app-2246)
+[Flask How To Make Validation On Request JSON](https://stackoverflow.com/questions/61644396/flask-how-to-make-validation-on-request-json-and-json-schema)
+[Change Host and Port Of Flask On Run](https://stackoverflow.com/questions/41940663/how-can-i-change-the-host-and-port-that-the-flask-command-uses)
+[Performance Testing in Python: A Step-by-Step Guide with Locust](https://code.likeagirl.io/performance-testing-in-python-a-step-by-step-guide-with-flask-e5a56f99513d)
+[How To Run Locust](https://appian-locust.readthedocs.io/en/stable/how_to_run_locust.html)
+[Behave](https://behave.readthedocs.io/en/latest/tutorial/)
