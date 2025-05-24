@@ -1,6 +1,6 @@
 import os
 import platform
-import flask
+import importlib.metadata
 
 class Config:
     ROOT_DIR = os.path.abspath(os.path.dirname(__file__))
@@ -15,7 +15,7 @@ def showBanner():
     bannerFile.close()
 
     bannerLog = bannerLog.replace("python.version", platform.python_version())
-    bannerLog = bannerLog.replace("flask.version", flask.__version__)
+    bannerLog = bannerLog.replace("flask.version", importlib.metadata.version("flask"))
     bannerLog = bannerLog.replace("server.path", "/")
     bannerLog = bannerLog.replace("server.port", "5000")
 

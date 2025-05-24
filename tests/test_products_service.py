@@ -31,7 +31,7 @@ def test_get_product_by_sku(app):
 
 def test_get_product_by_sku_not_found(app):
         with app.app_context():
-            with pytest.raises(ErrorTecnicoException, match="Producto no encontrado"):
+            with pytest.raises(ErrorTecnicoException, match="Product not found"):
                 get_product_by_sku(21)
 
 def test_save_product(app):
@@ -46,5 +46,5 @@ def test_save_product_exists(app):
         with app.app_context(): 
             products = get_products()
             product = products[0]
-            with pytest.raises(ErrorNegocioException, match="Producto ya existe"):
+            with pytest.raises(ErrorNegocioException, match="Product already exists"):
                 save_product(product)
