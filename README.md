@@ -110,15 +110,6 @@ Se debe ejecutar el siguiente comando
 coverage html
 ```
 
-## Tests de Rendimiento
-Se debe ejecutar el siguiente comando
-
-```shell
-locust -f performance-test/locust/python-flask.py -H http://localhost:5000 -u 5 -r 10 -t 40 --headless --html locust-report.html
-```
-
-Al finalizar generara un reporte locust-report.html
-
 ## Tests de Aceptación
 ### Configuración
 Se debe crear un archivo **behave.ini** 
@@ -130,6 +121,15 @@ behave acceptance-test/features -f html -o behave-report.html
 ```
 
 Esta configuracion permite definir donde se encuentran los features, el formato html y el nombre del archivo del reporte
+
+## Tests de Rendimiento
+Se debe ejecutar el siguiente comando
+
+```shell
+locust -f performance-test/locust/python-flask.py -H http://localhost:5000 -u 5 -r 10 -t 40 --headless --html locust-report.html
+```
+
+Al finalizar generara un reporte locust-report.html
 
 ## Links de Referencia
 A continuación dejo links utilizados para realizar este proyecto
