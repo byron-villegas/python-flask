@@ -1,4 +1,4 @@
-# Python Flask Project
+# Python Flask
 
 Proyecto base para aplicaciones Flask con ejemplos de configuración, testing y buenas prácticas.
 
