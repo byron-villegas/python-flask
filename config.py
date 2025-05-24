@@ -10,7 +10,7 @@ class Config:
     JWT_ACCESS_TOKEN_EXPIRES = 3600
 
 def showBanner(): 
-    bannerFile = open(os.path.abspath(os.path.dirname(__file__)) + "/banner.txt", "r")
+    bannerFile = open(Config.ROOT_DIR + "/banner.txt", "r")
     bannerLog = bannerFile.read()
     bannerFile.close()
 

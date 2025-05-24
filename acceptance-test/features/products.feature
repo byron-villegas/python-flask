@@ -1,12 +1,12 @@
 Feature: Productos
 
   Scenario: Obtener Productos
-    Given a request url https://python-flask-sus3.onrender.com/products
+    Given a request url /products
     When the request sends GET
     Then the response status is OK
 
   Scenario Outline: Obtener Producto por SKU
-    Given a request url https://python-flask-sus3.onrender.com/products/<SKU>
+    Given a request url /products/<SKU>
     When the request sends GET
     Then the response status is <STATUS>
 
@@ -16,7 +16,7 @@ Feature: Productos
   | 4234234  | INTERNAL_SERVER_ERROR |
 
   Scenario Outline: Registrar Producto
-    Given a request url https://python-flask-sus3.onrender.com/products
+    Given a request url /products
       And a request json payload
         """
         {

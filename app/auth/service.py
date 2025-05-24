@@ -24,7 +24,7 @@ def get_users():
     return users
 
 def read_users():
-    file_path = current_app.config.get("APP_DIR") + "/data/usuarios.json"
+    file_path = current_app.config.get("APP_DIR") + "/data/users.json"
 
     f = open(file_path, "r")
 

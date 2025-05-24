@@ -69,6 +69,8 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: python:3.12.5
+    env:
+      API_HOST: https://python-flask-sus3.onrender.com
     steps:
       - uses: actions/checkout@v4
       - name: Create Environment

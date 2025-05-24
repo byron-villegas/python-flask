@@ -1,52 +1,75 @@
-# Crear Environment
-Se debe ejecutar el siguiente comando
+# Python Flask Project
+
+Proyecto base para aplicaciones Flask con ejemplos de configuración, testing y buenas prácticas.
+
+## Tabla de Contenidos
+
+- [Instalación](#instalación)
+- [Ejecutar Aplicación](#ejecutar-aplicación)
+- [Testing](#testing)
+- [Tests de Rendimiento](#tests-de-rendimiento)
+- [Tests de Aceptación](#tests-de-aceptación)
+- [Links de referencia](#links-de-referencia)
+
+## Instalación
+### Instalar Python
+Para instalar python debemos bajarlo e instalarlo de la siguiente pagina https://www.python.org/downloads/
+
+### Crear Entorno Virtual
+Para crear el entorno virtual debemos ejecutar el siguiente comando
 
 ```shell
 python3 -m venv .venv
 ```
 
-# Instalar librerias
-Se debe ejecutar el siguiente comando
+### Instalar Dependencias
+Para instalar las dependencias debemos ejecutar el siguiente comando
 
 ```shell
 pip install -r requirements.txt
 ```
 
-# Librerias exclusivas para windows
-Cuando nos encontremos con una libreria exclusiva para windows debemos agregarle **;sys_platform == 'win32'** al final de la version en el archivo **requirements.txt**
+#### Dependencias Exclusivas Windows
+Cuando nos encontremos con una depencia exclusiva para windows debemos agregarle **;sys_platform == 'win32'** al final de la version de la dependencia en el archivo **requirements.txt**
 
 Ejemplo
 
 ```txt
 pywin32==306;sys_platform == 'win32'
 ```
-Entonces cuando hagamos un pip install -r requirements.txt en un sistema operativo como linux, macOS excluira esa libreria
+Entonces cuando instalemos las dependencias del proyecto en un sistema operativo como linux, macOS excluira esa libreria
 
-# Actualizar requirements.txt
-Se debe ejecutar el siguiente comando
+### Actualizar Dependencias
+Para actualizar las dependencias en el archivo **requeriments.txt** debemos ejecutar el siguiente comando
 
 ```shell
 pip freeze > requirements.txt
+```
+
+### Crear Archivo Dependencias Formato JSON
+Para crear el archivo de dependencias en formato JSON debemos ejecutar el siguiente comando
+
+```shell
 pip list --format json > requirements.json
 ```
 
-# Listar librerias en formato json
+### Listar Dependencias Formato JSON
 Se debe ejecutar el siguiente comando
 
 ```shell
 pip list --format json
 ```
 
-# Ejecutar aplicacion
+## Ejecutar Aplicación
 Se debe ejecutar el siguiente comando
 
 ```shell
 flask --app app run
 ```
 
-# Tests Unitarios
-### Configurar rutas
-Se debe crear un archivo pyproject con el siguiente contenido
+## Testing
+### Configuración
+Se debe crear un archivo **pyproject.toml** con el siguiente contenido
 
 ```python
 [tool.pytest.ini_options]
@@ -57,35 +80,37 @@ branch = true
 source = ["config", "app"]
 ```
 
-### Ejecutarlo
+Esta configuracion permite definir la ruta de los tests, las carpetas que debe considerar el reporte de cobertura de codigo
+
+### Ejecutar
 Se debe ejecutar el siguiente comando
 
 ```shell
 pytest
 ```
 
-### Ejecutarlo con cobertura
+### Ejecutar con Cobertura
 Se debe ejecutar el siguiente comando
 
 ```shell
 coverage run -m pytest
 ```
 
-### Generar reporte de cobertura en consola
+### Generar Reporte Cobertura Formato Consola
 Se debe ejecutar el siguiente comando
 
 ```shell
 coverage report
 ```
 
-### Generar reporte html de cobertura
+### Generar Reporte Cobertura Formato HTML
 Se debe ejecutar el siguiente comando
 
 ```shell
 coverage html
 ```
 
-# Tests de Rendimiento
+## Tests de Rendimiento
 Se debe ejecutar el siguiente comando
 
 ```shell
@@ -94,14 +119,19 @@ locust -f performance-test/locust/python-flask.py -H http://localhost:5000 -u 5 
 
 Al finalizar generara un reporte locust-report.html
 
-# Tests de Aceptación
+## Tests de Aceptación
+### Configuración
+Se debe crear un archivo **behave.ini** 
+
 Se debe ejecutar el siguiente comando
 
 ```shell
 behave acceptance-test/features -f html -o behave-report.html
 ```
 
-# Links Referenciales
+Esta configuracion permite definir donde se encuentran los features, el formato html y el nombre del archivo del reporte
+
+## Links de Referencia
 A continuación dejo links utilizados para realizar este proyecto
 
 [Python Naming Conventions](https://www.geeksforgeeks.org/python-naming-conventions/)
