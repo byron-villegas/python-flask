@@ -83,7 +83,7 @@ jobs:
         with:
           name: behave-report.html
           path: behave-report.html
-  performance-test:
+  performance-test-locust:
     needs: [ acceptance-test ]
     runs-on: ubuntu-latest
     container:
