@@ -112,8 +112,16 @@ coverage html
 
 ## Tests de Aceptación
 ### Configuración
-Se debe crear un archivo **behave.ini** 
+Se debe crear un archivo **behave.ini** con el siguiente contenido
 
+```text
+[behave.formatters]
+html = behave_html_formatter:HTMLFormatter
+```
+
+Esto nos permite definir el formato de salida de reporte de los tests de aceptación
+
+### Ejecución
 Se debe ejecutar el siguiente comando
 
 ```shell
@@ -123,6 +131,26 @@ behave acceptance-test/features -f html -o behave-report.html
 Esta configuracion permite definir donde se encuentran los features, el formato html y el nombre del archivo del reporte
 
 ## Tests de Rendimiento
+### Configuración
+Se debe crear un archivo con el nombre que deseemos, en este caso particular utilice el del mismo proyecto **python-flask.py** con el siguiente contenido
+
+```python
+from locust import HttpUser, task, between
+
+wait_time = between(1, 2)
+
+class Product(HttpUser):
+    @task
+    def get_products(self):
+        self.client.get("/products")
+    
+    @task
+    def get_product_by_sku(self):
+        self.client.get("/products/15207410")
+```
+Como podemos ver definimos la tarea, la funcion y a que endpoint deseamos validar
+
+### Ejecución
 Se debe ejecutar el siguiente comando
 
 ```shell
