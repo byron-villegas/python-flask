@@ -130,6 +130,8 @@ behave acceptance-test/features -f html -o behave-report.html
 
 Esta configuracion permite definir donde se encuentran los features, el formato html y el nombre del archivo del reporte
 
+Al finalizar generara un reporte **behave-report.html**
+
 ## Tests de Rendimiento
 ### Configuración
 Se debe crear un archivo con el nombre que deseemos, en este caso particular utilice el del mismo proyecto **python-flask.py** con el siguiente contenido
@@ -157,7 +159,7 @@ Se debe ejecutar el siguiente comando
 locust -f performance-test/locust/python-flask.py -H http://localhost:5000 -u 5 -r 10 -t 40 --headless --html locust-report.html
 ```
 
-Al finalizar generara un reporte locust-report.html
+Al finalizar generara un reporte **locust-report.html**
 
 ## Links de Referencia
 A continuación dejo links utilizados para realizar este proyecto
