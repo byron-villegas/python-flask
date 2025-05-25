@@ -8,7 +8,7 @@ info:
   license:
     name: MIT
     url: https://github.com/byron-villegas/python-flask/blob/main/LICENSE
-  version: 1.0.12
+  version: 1.0.0
 externalDocs:
   description: Repository
   url: https://github.com/byron-villegas/python-flask
