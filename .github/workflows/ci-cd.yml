@@ -62,8 +62,8 @@ jobs:
         with:
           name: deploy
           path: deploy.json
-      - name: Sleep By Two Minutes
-        run: sleep 120
+      - name: Sleep By Three Minutes
+        run: sleep 180
   acceptance-test:
     needs: [ deploy ]
     runs-on: ubuntu-latest
