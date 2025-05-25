@@ -8,6 +8,8 @@ class Config:
     SECRET_KEY = os.environ.get('SECRET_KEY')
     JWT_SECRET_KEY = 'dasasdds'
     JWT_ACCESS_TOKEN_EXPIRES = 3600
+    SWAGGER_URL = '/swagger-ui'
+    SWAGGER_FILE = "/static/swagger.yml"
 
 def showBanner(): 
     bannerFile = open(Config.ROOT_DIR + "/banner.txt", "r")
