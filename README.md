@@ -7,8 +7,8 @@ Proyecto base para aplicaciones Flask con ejemplos de configuración, testing y 
 - [Instalación](#instalación)
 - [Ejecutar Aplicación](#ejecutar-aplicación)
 - [Testing](#testing)
-- [Tests de Rendimiento](#tests-de-rendimiento)
 - [Tests de Aceptación](#tests-de-aceptación)
+- [Tests de Rendimiento](#tests-de-rendimiento)
 - [Links de Referencia](#links-de-referencia)
 
 ## Instalación
