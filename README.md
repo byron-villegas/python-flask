@@ -66,8 +66,8 @@ pip list --format json
 Este proyecto utiliza dotenv por lo que podemos crear el archivo **.env** con las siguientes variables
 
 ```text
-SECRET_KEY = 'sasfdfsdsdf'
-JWT_SECRET_KEY = 'sasfdfsdsdf'
+SECRET_KEY=sasfdfsdsdf
+JWT_SECRET_KEY=sasfdfssas
 ```
 
 Estas variables son las llaves secretas que se obtienen por variable de entorno, internamente las usa flask por defecto
