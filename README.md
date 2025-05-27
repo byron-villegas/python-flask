@@ -5,10 +5,12 @@ Proyecto base para aplicaciones Flask con ejemplos de configuración, testing y 
 ## Tabla de Contenidos
 
 - [Instalación](#instalación)
+- [Variables de Entorno](#variables-de-entorno)
 - [Ejecutar Aplicación](#ejecutar-aplicación)
 - [Testing](#testing)
 - [Tests de Aceptación](#tests-de-aceptación)
 - [Tests de Rendimiento](#tests-de-rendimiento)
+- [Swagger](#swagger)
 - [Links de Referencia](#links-de-referencia)
 
 ## Instalación
@@ -59,6 +61,16 @@ Se debe ejecutar el siguiente comando
 ```shell
 pip list --format json
 ```
+
+## Variables de Entorno
+Este proyecto utiliza dotenv por lo que podemos crear el archivo **.env** con las siguientes variables
+
+```text
+SECRET_KEY = 'sasfdfsdsdf'
+JWT_SECRET_KEY = 'sasfdfsdsdf'
+```
+
+Estas variables son las llaves secretas que se obtienen por variable de entorno
 
 ## Ejecutar Aplicación
 Se debe ejecutar el siguiente comando
@@ -160,6 +172,22 @@ locust -f performance-test/locust/python-flask.py -H http://localhost:5000 -u 5 
 ```
 
 Al finalizar generara un reporte **locust-report.html**
+
+
+## Swagger
+### Documentar Endpoints
+Para documentar los endpoints debemos hacerlo de forma manual mediante un archivo **/static/swagger.yml**
+
+### Configurar Swagger UI
+Para configurar Swagger UI simplemente agregamos el siguiente codigo al archivo **__init__.py**
+
+```python
+swaggerui_blueprint = get_swaggerui_blueprint(Config.SWAGGER_URL, f'{Config.SWAGGER_FILE}')
+```
+
+La variable **SWAGGER_URL** esta configurada con **/swagger-ui** y la variable SWAGGER_FILE con **/static/swagger.yml**
+
+Cuando ejecutemos a la aplicacion debemos entrar a la pagina **/swagger-ui/**
 
 ## Links de Referencia
 A continuación dejo links utilizados para realizar este proyecto
