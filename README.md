@@ -70,7 +70,7 @@ SECRET_KEY = 'sasfdfsdsdf'
 JWT_SECRET_KEY = 'sasfdfsdsdf'
 ```
 
-Estas variables son las llaves secretas que se obtienen por variable de entorno
+Estas variables son las llaves secretas que se obtienen por variable de entorno, internamente las usa flask por defecto
 
 ## Ejecutar Aplicación
 Se debe ejecutar el siguiente comando
