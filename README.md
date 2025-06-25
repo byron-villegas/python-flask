@@ -79,21 +79,21 @@ Se debe ejecutar el siguiente comando
 flask --app app run
 ```
 
-### Ejecutar
-Para ejecutar la imagen debemos utilizar el siguiente comando
-
-```shell
-docker run -p 5000:5000 python-flask
-```
-
 ### Docker
 A continuacion dejo los comandos a utilizar para generar la imagen y posteriormente ejecutarla
 
-### Imagen
+#### Imagen
 Para generar la imagen debemos utilizar el siguiente comando
 
 ```shell
 docker build -t python-flask .
+```
+
+#### Ejecutar
+Para ejecutar la imagen debemos utilizar el siguiente comando
+
+```shell
+docker run -p 5000:5000 python-flask
 ```
 
 ## Testing
