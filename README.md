@@ -7,6 +7,7 @@ Proyecto base para aplicaciones Flask con ejemplos de configuración, testing y 
 - [Instalación](#instalación)
 - [Variables de Entorno](#variables-de-entorno)
 - [Ejecutar Aplicación](#ejecutar-aplicación)
+- [Docker](#docker)
 - [Testing](#testing)
 - [Tests de Aceptación](#tests-de-aceptación)
 - [Tests de Rendimiento](#tests-de-rendimiento)
@@ -77,6 +78,23 @@ Se debe ejecutar el siguiente comando
 
 ```shell
 flask --app app run
+```
+
+## Docker
+A continuacion dejo los comandos a utilizar para generar la imagen y posteriormente ejecutarla
+
+### Imagen
+Para generar la imagen debemos utilizar el siguiente comando
+
+```shell
+docker build -t python-flask .
+```
+
+### Ejecutar
+Para ejecutar la imagen debemos utilizar el siguiente comando
+
+```shell
+docker run -p 5000:5000 python-flask
 ```
 
 ## Testing
