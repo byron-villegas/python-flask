@@ -12,7 +12,7 @@ class Config:
     JWT_ACCESS_TOKEN_EXPIRES = 3600
     SWAGGER_URL = '/swagger-ui'
     SWAGGER_FILE = "/static/swagger.yml"
-    TITLE = "Python Flask"
+    TITLE = "python-flask"
     VERSION = "1.0.0"
 
 def showBanner(): 
