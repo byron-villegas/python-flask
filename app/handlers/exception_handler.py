@@ -9,6 +9,8 @@ bp = Blueprint('exception_handler', __name__)
 @bp.app_errorhandler(Exception)
 def handle_exception(exception):
 
+    print(f"Exception caught: {exception}")
+
     if isinstance(exception, HTTPException):
         return exception
 
