@@ -1,183 +1,245 @@
 [
-    {
-        "id": 1,
-        "sku": 15207410,
-        "imagen": "./assets/img/products/macbook-pro.webp",
-        "nombre": "MacBook Pro 13",
-        "descripcion": "MacBook Pro 13 1TB 16GB Ram",
-        "caracteristicas": [
-            {
-                "titulo": "Entradas HDMI",
-                "valor": "No incluye"
-            },
-            {
-                "titulo": "Hecho en",
-                "valor": "China"
-            },
-            {
-                "titulo": "Profundidad",
-                "valor": "21.24 cm"
-            },
-            {
-                "titulo": "Unidad óptica",
-                "valor": "No"
-            },
-            {
-                "titulo": "Entradas USB",
-                "valor": "2"
-            }
-        ],
-        "marca": "Apple",
-        "precio": 2500000
-    },
-    {
-        "id": 2,
-        "sku": 8014962,
-        "imagen": "./assets/img/products/nintendo-switch.png",
-        "nombre": "Nintendo Switch Neon",
-        "descripcion": "Nintendo Switch Neon",
-        "caracteristicas": [
-            {
-                "titulo": "Capacidad de almacenamiento",
-                "valor": "32GB"
-            },
-            {
-                "titulo": "Procesador",
-                "valor": "Nvidia Tegra"
-            },
-            {
-                "titulo": "Entradas USB",
-                "valor": "1"
-            },
-            {
-                "titulo": "Entradas HDMI",
-                "valor": "1"
-            },
-            {
-                "titulo": "Conectividad",
-                "valor": "Wifi"
-            }
-        ],
-        "marca": "Nintendo",
-        "precio": 250000
-    },
-    {
-        "id": 3,
-        "sku": 15207412,
-        "imagen": "./assets/img/products/atari.png",
-        "nombre": "Atari 2600",
-        "descripcion": "Atari 2600",
-        "caracteristicas": [
-            {
-                "titulo": "Plataforma",
-                "valor": "Atari 2600"
-            },
-            {
-                "titulo": "Color",
-                "valor": "Negro"
-            },
-            {
-                "titulo": "Resolución",
-                "valor": "192x160"
-            }
-        ],
-        "marca": "Atari",
-        "precio": 100000
-    },
-    {
-        "id": 4,
-        "sku": 15207413,
-        "imagen": "./assets/img/products/nes.png",
-        "nombre": "Nintendo NES",
-        "descripcion": "Nintendo NES",
-        "caracteristicas": [
-            {
-                "titulo": "Modelo",
-                "valor": "Nintendo NES"
-            },
-            {
-                "titulo": "Capacidad de almacenamiento",
-                "valor": "512MB"
-            },
-            {
-                "titulo": "Color",
-                "valor": "Plomo"
-            }
-        ],
-        "marca": "Nintendo",
-        "precio": 100000
-    },
-    {
-        "id": 5,
-        "sku": 15207414,
-        "imagen": "./assets/img/products/snes.png",
-        "nombre": "Super Nintendo",
-        "descripcion": "Super Nintendo",
-        "caracteristicas": [
-            {
-                "titulo": "Conectividad",
-                "valor": "AV Cable"
-            },
-            {
-                "titulo": "Modelo",
-                "valor": "SNES-001"
-            },
-            {
-                "titulo": "Año de fabricación",
-                "valor": "1990"
-            },
-            {
-                "titulo": "Color",
-                "valor": "Plomo"
-            }
-        ],
-        "marca": "Nintendo",
-        "precio": 130000
-    },
-    {
-        "id": 6,
-        "sku": 15207415,
-        "imagen": "./assets/img/products/n64.png",
-        "nombre": "Nintendo 64",
-        "descripcion": "Nintendo 64",
-        "caracteristicas": [
-            {
-                "titulo": "Modelo",
-                "valor": "Nintendo 64"
-            },
-            {
-                "titulo": "Capacidad de almacenamiento",
-                "valor": "64MB"
-            },
-            {
-                "titulo": "Color",
-                "valor": "Negro"
-            }
-        ],
-        "marca": "Nintendo",
-        "precio": 150000
-    },
-    {
-        "id": 7,
-        "sku": 15207416,
-        "imagen": "./assets/img/products/xbox.png",
-        "nombre": "Xbox",
-        "descripcion": "Xbox",
-        "caracteristicas": [
-            {
-                "titulo": "Modelo",
-                "valor": "Xbox 360"
-            },
-            {
-                "titulo": "Capacidad de almacenamiento",
-                "valor": "8GB"
-            },
-            {
-                "titulo": "Color",
-                "valor": "Negro"
-            }
-        ],
-        "marca": "Microsoft",
-        "precio": 200000
-    }
+   {
+      "id": 1,
+      "sku": 15207410,
+      "imagen": "./assets/img/products/macbook-pro.webp",
+      "nombre": "MacBook Pro 13",
+      "descripcion": "MacBook Pro 13 1TB 16GB Ram",
+      "caracteristicas": [
+         {
+            "titulo": "Entradas HDMI",
+            "valor": "No incluye"
+         },
+         {
+            "titulo": "Hecho en",
+            "valor": "China"
+         },
+         {
+            "titulo": "Profundidad",
+            "valor": "21.24 cm"
+         },
+         {
+            "titulo": "Unidad óptica",
+            "valor": "No"
+         },
+         {
+            "titulo": "Entradas USB",
+            "valor": "2"
+         }
+      ],
+      "marca": "Apple",
+      "precio": 2500000
+   },
+   {
+      "id": 2,
+      "sku": 8014962,
+      "imagen": "./assets/img/products/nintendo-switch.png",
+      "nombre": "Nintendo Switch Neon",
+      "descripcion": "Nintendo Switch Neon",
+      "caracteristicas": [
+         {
+            "titulo": "Capacidad de almacenamiento",
+            "valor": "32GB"
+         },
+         {
+            "titulo": "Procesador",
+            "valor": "Nvidia Tegra"
+         },
+         {
+            "titulo": "Entradas USB",
+            "valor": "1"
+         },
+         {
+            "titulo": "Entradas HDMI",
+            "valor": "1"
+         },
+         {
+            "titulo": "Conectividad",
+            "valor": "Wifi"
+         }
+      ],
+      "marca": "Nintendo",
+      "precio": 250000
+   },
+   {
+      "id": 3,
+      "sku": 15207412,
+      "imagen": "./assets/img/products/atari.png",
+      "nombre": "Atari 2600",
+      "descripcion": "Atari 2600",
+      "caracteristicas": [
+         {
+            "titulo": "Plataforma",
+            "valor": "Atari 2600"
+         },
+         {
+            "titulo": "Color",
+            "valor": "Negro"
+         },
+         {
+            "titulo": "Resolución",
+            "valor": "192x160"
+         }
+      ],
+      "marca": "Atari",
+      "precio": 100000
+   },
+   {
+      "id": 4,
+      "sku": 15207413,
+      "imagen": "./assets/img/products/nes.png",
+      "nombre": "Nintendo NES",
+      "descripcion": "Nintendo NES",
+      "caracteristicas": [
+         {
+            "titulo": "Modelo",
+            "valor": "Nintendo NES"
+         },
+         {
+            "titulo": "Capacidad de almacenamiento",
+            "valor": "512MB"
+         },
+         {
+            "titulo": "Color",
+            "valor": "Plomo"
+         }
+      ],
+      "marca": "Nintendo",
+      "precio": 100000
+   },
+   {
+      "id": 5,
+      "sku": 15207414,
+      "imagen": "./assets/img/products/snes.png",
+      "nombre": "Super Nintendo",
+      "descripcion": "Super Nintendo",
+      "caracteristicas": [
+         {
+            "titulo": "Conectividad",
+            "valor": "AV Cable"
+         },
+         {
+            "titulo": "Modelo",
+            "valor": "SNES-001"
+         },
+         {
+            "titulo": "Año de fabricación",
+            "valor": "1990"
+         },
+         {
+            "titulo": "Color",
+            "valor": "Plomo"
+         }
+      ],
+      "marca": "Nintendo",
+      "precio": 130000
+   },
+   {
+      "id": 6,
+      "sku": 15207415,
+      "imagen": "./assets/img/products/n64.png",
+      "nombre": "Nintendo 64",
+      "descripcion": "Nintendo 64",
+      "caracteristicas": [
+         {
+            "titulo": "Modelo",
+            "valor": "Nintendo 64"
+         },
+         {
+            "titulo": "Capacidad de almacenamiento",
+            "valor": "64MB"
+         },
+         {
+            "titulo": "Color",
+            "valor": "Negro"
+         }
+      ],
+      "marca": "Nintendo",
+      "precio": 150000
+   },
+   {
+      "id": 7,
+      "sku": 15207416,
+      "imagen": "./assets/img/products/xbox.png",
+      "nombre": "Xbox",
+      "descripcion": "Xbox",
+      "caracteristicas": [
+         {
+            "titulo": "Modelo",
+            "valor": "Xbox 360"
+         },
+         {
+            "titulo": "Capacidad de almacenamiento",
+            "valor": "8GB"
+         },
+         {
+            "titulo": "Color",
+            "valor": "Negro"
+         }
+      ],
+      "marca": "Microsoft",
+      "precio": 200000
+   },
+   {
+      "caracteristicas": [
+         {
+            "titulo": "Entradas HDMI",
+            "valor": "No incluye"
+         },
+         {
+            "titulo": "Hecho en",
+            "valor": "China"
+         },
+         {
+            "titulo": "Profundidad",
+            "valor": "21.24 cm"
+         },
+         {
+            "titulo": "Unidad óptica",
+            "valor": "No"
+         },
+         {
+            "titulo": "Entradas USB",
+            "valor": "2"
+         }
+      ],
+      "descripcion": "MacBook Pro 13 1TB 16GB Ram",
+      "id": 1,
+      "imagen": "./assets/img/products/macbook-pro.webp",
+      "marca": "Apple",
+      "nombre": "MacBook Pro 13",
+      "precio": 2500000,
+      "sku": 2401
+   },
+   {
+      "id": 1,
+      "sku": 908,
+      "imagen": "./assets/img/products/macbook-pro.webp",
+      "nombre": "MacBook Pro 13",
+      "descripcion": "MacBook Pro 13 1TB 16GB Ram",
+      "caracteristicas": [
+         {
+            "titulo": "Entradas HDMI",
+            "valor": "No incluye"
+         },
+         {
+            "titulo": "Hecho en",
+            "valor": "China"
+         },
+         {
+            "titulo": "Profundidad",
+            "valor": "21.24 cm"
+         },
+         {
+            "titulo": "Unidad óptica",
+            "valor": "No"
+         },
+         {
+            "titulo": "Entradas USB",
+            "valor": "2"
+         }
+      ],
+      "marca": "Apple",
+      "precio": 2500000
+   }
 ]
