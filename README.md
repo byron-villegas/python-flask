@@ -24,6 +24,13 @@ Para crear el entorno virtual debemos ejecutar el siguiente comando
 python3 -m venv .venv
 ```
 
+### Usar Envinronment
+Se debe ejecutar el siguiente comando
+
+```shell
+source .venv/bin/activate
+```
+
 ### Instalar Dependencias
 Para instalar las dependencias debemos ejecutar el siguiente comando
 
@@ -192,17 +199,86 @@ Al finalizar generara un reporte **locust-report.html**
 
 
 ## Swagger
+### Documentar Modelos
+Para documentar los modelos debemos hacerlo mediante el archivo **swagger_schemas.py** 
+
 ### Documentar Endpoints
-Para documentar los endpoints debemos hacerlo de forma manual mediante un archivo **/static/swagger.yml**
+Debemos documentarlo en los **routes.py** de respectivo a continuacion un ejemplo
+
+```python
+@bp.route("/products", methods=["GET"])
+def get_products():
+    """
+    Obtener todos los productos
+    ---
+    tags:
+      - Productos
+    responses:
+      200:
+        description: Lista de productos obtenida exitosamente
+        schema:
+          type: array
+          items:
+            $ref: '#/definitions/ProductDto'
+      500:
+        description: Error interno del servidor
+    """
+    products = service.get_products()
+
+    return jsonify(products)
+```
 
 ### Configurar Swagger UI
 Para configurar Swagger UI simplemente agregamos el siguiente codigo al archivo **__init__.py**
 
 ```python
-swaggerui_blueprint = get_swaggerui_blueprint(Config.SWAGGER_URL, f'{Config.SWAGGER_FILE}')
+    # Flasgger configuration
+    swagger_config = {
+        "headers": [],
+        "specs": [
+            {
+                "endpoint": "apispec",
+                "route": "/apispec.json",
+                "rule_filter": lambda rule: True,
+                "model_filter": lambda tag: True,
+            }
+        ],
+        "static_url_path": "/flasgger_static",
+        "swagger_ui": True,
+        "specs_route": "/swagger-ui"
+    }
+    
+    # Importar esquemas de Pydantic después de crear la app
+    from app.swagger_schemas import get_swagger_definitions
+    
+    swagger_template = {
+        "swagger": "2.0",
+        "info": {
+            "title": "Python Flask API",
+            "description": "API REST con Flask, JWT y documentación automática con DTOs de Pydantic",
+            "version": "1.0.0",
+            "contact": {
+                "name": "API Support",
+            }
+        },
+        "securityDefinitions": {
+            "Bearer": {
+                "type": "apiKey",
+                "name": "Authorization",
+                "in": "header",
+                "description": "JWT Authorization header usando el esquema Bearer. Ejemplo: 'Bearer {token}'"
+            }
+        },
+        "security": [
+            {
+                "Bearer": []
+            }
+        ],
+        "definitions": get_swagger_definitions()
+    }
+    
+    Swagger(app, config=swagger_config, template=swagger_template)
 ```
-
-La variable **SWAGGER_URL** esta configurada con **/swagger-ui** y la variable SWAGGER_FILE con **/static/swagger.yml**
 
 Cuando ejecutemos a la aplicacion debemos entrar a la pagina **/swagger-ui/**
 

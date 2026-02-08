@@ -1,7 +1,7 @@
 from flask import Flask
 from config import Config
 from flask_jwt_extended import JWTManager
-from flask_swagger_ui import get_swaggerui_blueprint
+from flasgger import Swagger
 
 
 def create_app(config_class=Config):
@@ -11,13 +11,52 @@ def create_app(config_class=Config):
 
     jwt = JWTManager(app)
 
-    swaggerui_blueprint = get_swaggerui_blueprint(
-        Config.SWAGGER_URL,
-        f'{Config.SWAGGER_FILE}'
-    )
-
-    # Swagger UI configuration
-    app.register_blueprint(swaggerui_blueprint)
+    # Flasgger configuration
+    swagger_config = {
+        "headers": [],
+        "specs": [
+            {
+                "endpoint": "apispec",
+                "route": "/apispec.json",
+                "rule_filter": lambda rule: True,
+                "model_filter": lambda tag: True,
+            }
+        ],
+        "static_url_path": "/flasgger_static",
+        "swagger_ui": True,
+        "specs_route": "/swagger-ui"
+    }
+    
+    # Importar esquemas de Pydantic después de crear la app
+    from app.swagger_schemas import get_swagger_definitions
+    
+    swagger_template = {
+        "swagger": "2.0",
+        "info": {
+            "title": "Python Flask API",
+            "description": "API REST con Flask, JWT y documentación automática con DTOs de Pydantic",
+            "version": "1.0.0",
+            "contact": {
+                "name": "API Support",
+            }
+        },
+        "securityDefinitions": {
+            "Bearer": {
+                "type": "apiKey",
+                "name": "Authorization",
+                "in": "header",
+                "description": "JWT Authorization header usando el esquema Bearer. Ejemplo: 'Bearer {token}'"
+            }
+        },
+        "security": [
+            {
+                "Bearer": []
+            }
+        ],
+        "definitions": get_swagger_definitions()
+    }
+    
+    Swagger(app, config=swagger_config, template=swagger_template)
 
     # Register blueprints here
     from app.handlers.exception_handler import bp as bp_exception_handler
